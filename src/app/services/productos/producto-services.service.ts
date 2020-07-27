@@ -9,7 +9,8 @@ import { Producto }       from '../../models/producto';
 })
 export class ProductoServicesService {
 
-  private urlEnpomit : string = 'http://localhost:8080/api';
+  // private urlEnpomit : string = 'http://localhost:8080/api';
+  private urlEnpomit : string = 'https://test-java-henry.herokuapp.com';
   
   constructor(private Http : HttpClient ) { }
 
