@@ -1,0 +1,25 @@
+<header>
+    <div style="margin-right: 20px;">
+        <a href="https://www.walmartchile.cl/" class="logo"><img src="https://www.walmartchile.cl/views/layout/walmartchile/img/logo-walmartchile.png" alt="Walmart Chile"></a>
+    </div>
+    <div class="pos-f-t cont" >
+        
+        <nav class="navbar navbar-dark" >
+            <!-- aaaa -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a style="padding-left: 10px; color: #fff;" disabled><strong> Categoria</strong></a>
+        </nav>
+    </div>
+
+    <nav class="navbar ">
+        <form class="form-inline " (submit)="search()">
+          <input class="form-control Search" 
+          name="candidato" 
+          [(ngModel)]="candidato" 
+          type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+          <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+        </form>
+      </nav>
+</header>

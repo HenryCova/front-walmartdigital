@@ -1,0 +1,77 @@
+<div class="alert alert-warning" *ngIf="alerta">Lo sentimos, no encontramos resultado para su busqueda.</div>
+<div class="alert alert-danger" *ngIf="error">Lo sentimos a ocurridoun error, Vuelva a intentarlo.</div>
+
+<div >
+    <div class="result" *ngIf="this.candidateBase? true : false" >
+        <a> Resultado para <b> {{candidateBase}}:</b></a>
+    </div>
+
+    <div class="result" *ngIf="this.candidateBase? false : true">
+        <a> Resultado </a>
+    </div>
+
+    <div class="contProd" *ngIf="!existProd" >
+        
+    </div>
+
+    <div class="contProd" *ngIf="existProd" >
+        <div class="container">
+            <div class="row"  >
+                <div class="col-md-4" *ngFor="let producto of productos">
+                    <div class="colum">
+                        <div>
+                            <img  src="https://{{producto.image}}" 
+                            alt="Card image cap">
+                        </div>
+                        <div class="descrCol">                               
+                            <div class= "desc">
+                                <a><strong>{{producto.brand}} </strong>  {{producto.description}} </a>
+                            </div>      
+                            <div>
+                                <h4>
+                                    <p class="precio"> 
+                                        $ {{ formatearMoneda(producto.price)}}
+                                        <a class="descuento" *ngIf="palindromo"> 50% </a>
+                                    </p>
+                                </h4>
+                            </div>
+                            <div class="striket" *ngIf="palindromo" >
+                                <del>{{ formatearMoneda(producto.price) }}</del> 
+                            </div>
+                            <div style="padding-left: 30px; padding-top: 40px;">
+                                <h4 class="tipoRetiro">
+                                <a class="textDespacho" > Despacho </a>
+                                </h4>
+                            </div>
+                            <div style="padding-left: 100px;">
+                                <button type="button" class="btn btn-default">
+                                    Agregar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>              
+            </div>
+        </div>
+
+        <div class="container">
+            <div class=" barProgreso">
+                <nav class="Page navigation" style="padding-top: 5px;">
+                <ul  class="pagination  justify-content-center">
+                    <li class="page-item" [ngClass]="first? 'desabled':''" >
+                        <strong><a (click)="anterior()" style="font-size: 60px;">  &lt; </a></strong>
+                    </li>
+                    <li class="page-item desabled">
+                        <a style="font-size: 30px;">{{pageNumber + 1}}</a>
+                    </li>
+                    <li class="page-item" [ngClass]="last? 'desabled':''" >
+                       <strong><a  (click)="proximo()" style="font-size: 60px;">  &gt; </a></strong>
+                    </li>
+                </ul>  
+                </nav>
+            </div>
+
+        </div>
+    </div>
+   
+</div>
