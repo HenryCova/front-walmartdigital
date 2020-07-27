@@ -2,7 +2,7 @@ import { Injectable }     from '@angular/core';
 import { HttpClient}      from '@angular/common/http';
 import { Observable , 
          throwError }     from 'rxjs';
-import { Producto }       from '../../models/producto';
+import { Producto }       from './../../models/producto';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class ProductoServicesService {
 
   // private urlEnpomit : string = 'http://localhost:8080/api';
   private urlEnpomit : string = 'https://test-java-henry.herokuapp.com';
-  
+
   constructor(private Http : HttpClient ) { }
 
   /**
