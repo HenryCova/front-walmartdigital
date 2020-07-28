@@ -108,6 +108,8 @@ carousel-inner{
 }
 
 .descuento{
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: red;
     color: #fff;
     border-radius: 25px;

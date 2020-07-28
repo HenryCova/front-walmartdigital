@@ -29,21 +29,24 @@
                             </div>      
                             <div>
                                 <h4>
-                                    <p class="precio"> 
+                                    <p class="precio" *ngIf="!palindromo"> 
                                         $ {{ formatearMoneda(producto.price)}}
-                                        <a class="descuento" *ngIf="palindromo"> 50% </a>
+                                   </p>
+                                    <p class="precio" *ngIf="palindromo"> 
+                                         $ {{ formatearMoneda(producto.price/2)}}
+                                        <a class="descuento" > 50% </a>
                                     </p>
                                 </h4>
                             </div>
                             <div class="striket" *ngIf="palindromo" >
                                 <del>{{ formatearMoneda(producto.price) }}</del> 
                             </div>
-                            <div style="padding-left: 30px; padding-top: 40px;">
+                            <!-- <div style="padding-left: 30px; padding-top: 40px;">
                                 <h4 class="tipoRetiro">
                                 <a class="textDespacho" > Despacho </a>
                                 </h4>
-                            </div>
-                            <div style="padding-left: 100px;">
+                            </div> -->
+                            <div style="padding-left: 100px; margin-top: 50px;">
                                 <button type="button" class="btn btn-default">
                                     Agregar
                                 </button>
@@ -59,13 +62,13 @@
                 <nav class="Page navigation" style="padding-top: 5px;">
                 <ul  class="pagination  justify-content-center">
                     <li class="page-item" [ngClass]="first? 'desabled':''" >
-                        <strong><a (click)="anterior()" style="font-size: 60px;">  &lt; </a></strong>
+                        <strong><a (click)="anterior()" style="font-size: 60px; cursor: pointer;">  &lt; </a></strong>
                     </li>
                     <li class="page-item desabled">
                         <a style="font-size: 30px;">{{pageNumber + 1}}</a>
                     </li>
                     <li class="page-item" [ngClass]="last? 'desabled':''" >
-                       <strong><a  (click)="proximo()" style="font-size: 60px;">  &gt; </a></strong>
+                       <strong><a  (click)="proximo()" style="font-size: 60px; cursor: pointer;">  &gt; </a></strong>
                     </li>
                 </ul>  
                 </nav>
