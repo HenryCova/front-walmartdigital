@@ -1,6 +1,7 @@
 import { Injectable }     from '@angular/core';
 import { HttpClient}      from '@angular/common/http';
-import { Observable }     from 'rxjs';
+import { Observable , 
+         throwError }     from 'rxjs';
 import { Producto }       from '../../models/Producto';
 
 @Injectable({
@@ -8,9 +9,8 @@ import { Producto }       from '../../models/Producto';
 })
 export class ProductoServicesService {
 
-  // private urlEnpomit : string = 'http://localhost:8080/api';
-  private urlEnpomit : string = 'https://test-java-henry.herokuapp.com';
-
+  private urlEnpomit : string = 'http://localhost:8080/api';
+  
   constructor(private Http : HttpClient ) { }
 
   /**

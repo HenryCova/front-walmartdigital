@@ -8,19 +8,20 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --output-path angularapp  --aot --prod"
+    "buildProduction": "ng build --prod"
+
   },
   "engines": {
-    "node": "v10.13",
-    "npm": "5.8.0"
+    "node": "10.14.2",
+    "npm": "6.4.1"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.9",
+    "@angular/cli": "~9.1.7",
     "@angular/common": "~9.1.9",
-    "@angular/cli": "^7.1.2",
-    "@angular/compiler-cli": "^6.1.10",
     "@angular/compiler": "~9.1.9",
+    "@angular/compiler-cli": "~9.1.9",
     "@angular/core": "~9.1.9",
     "@angular/forms": "~9.1.9",
     "@angular/platform-browser": "~9.1.9",
@@ -30,16 +31,14 @@
     "path": "^0.12.7",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "typescript": "~2.8",
+    "typescript": "~3.8.3",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.10.0",
-    "@angular/cli": "^7.1.2",
-    "@angular/compiler-cli": "^6.1.10",
+    "@angular-devkit/build-angular": "~0.901.7",
+    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -50,7 +49,6 @@
     "karma-jasmine-html-reporter": "^1.4.2",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "typescript": "~2.8"
+    "tslint": "~6.1.0"
   }
 }
